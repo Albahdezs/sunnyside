@@ -4,7 +4,7 @@ This is a solution to the [Agency landing page challenge on Frontend Mentor](htt
 
 ## 🛜 Live
 
-- Live URL: [Visita](https://albahdezs.github.io/bento-grid/)
+- Live URL: [Visita](https://albahdezs.github.io/sunnyside/)
 
 ## 🎆 Imágenes
 
