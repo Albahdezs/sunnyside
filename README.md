@@ -11,7 +11,7 @@ This is a solution to the [Agency landing page challenge on Frontend Mentor](htt
 - Versión móvil<br />
   <img src="design/Mobile.png" width="25%" height="25%">
 
-- Versión ordenador
+- Versión ordenador<br />
   <img src="design/Desktop.png" width="50%" height="50%">
 
 ### 🏗️ Construido con
