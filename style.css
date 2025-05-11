@@ -1,0 +1,454 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+
+:root {
+  --primary-red: #fe7867;
+  --primary-yellow: #fad400;
+  --gd-text: #25564b;
+  --photo-text: #19536b;
+  --footer-text: #458c7d;
+  --footer: #90d4c6;
+
+  --grey950: #23303e;
+  --grey600: #5a636c;
+  --grey550: #818498;
+  --grey400: #a7abae;
+  --grey-text: #808397;
+  --white: #ffffff;
+
+  --title-font: "Fraunces", serif;
+  --body-font: "Barlow", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--body-font);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  padding: 32px 24px;
+  z-index: 2;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  margin: 0 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--grey-text);
+  font-weight: 600;
+  color: var(--white);
+}
+
+.nav-links button {
+  padding: 16px 32px;
+  border: none;
+  border-radius: 32px;
+  color: var(--grey950);
+  font-family: var(--title-font);
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.nav-links button:hover {
+  color: var(--white);
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.hamburger img {
+  display: none;
+  width: 24px;
+  height: 18px;
+  cursor: pointer;
+}
+
+h1 {
+  font-family: var(--title-font);
+  font-size: 56px;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 9px;
+  padding-bottom: 30px;
+  margin-top: 200px;
+}
+
+/* HERO */
+.hero {
+  background: url(./images/desktop/image-header.jpg) no-repeat center;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* SERVICES GRID (Egg & Glass) */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+}
+
+.services-grid .text {
+  display: flex;
+  flex-direction: column;
+  padding: 140px;
+}
+
+.services-grid h2 {
+  font-family: var(--title-font);
+  font-size: 40px;
+  margin-bottom: 2rem;
+}
+
+.services-grid p {
+  font-size: 18px;
+  color: var(--grey-text);
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+
+.services-grid .highlight1 a,
+.services-grid .highlight2 a {
+  font-family: var(--title-font);
+  text-transform: uppercase;
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--grey950);
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+.services-grid .highlight1 a::before,
+.services-grid .highlight2 a::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  bottom: -0.2em;
+  width: 130px;
+  height: 0.6em;
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.services-grid .highlight1 a::before {
+  background-color: rgba(250, 212, 0, 0.3);
+}
+
+.services-grid .highlight1 a:hover::before {
+  background-color: var(--primary-yellow);
+  cursor: pointer;
+}
+
+.services-grid .highlight2 a::before {
+  background-color: rgba(254, 120, 103, 0.3);
+}
+
+.services-grid .highlight2 a:hover::before {
+  background-color: var(--primary-red);
+  cursor: pointer;
+}
+
+.services-grid .image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.services-grid .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* DESIGN GRID (Cherries & Orange) */
+.design-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.design-grid article {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
+
+.design-grid img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.design-grid .container {
+  position: absolute;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: white;
+  text-align: center;
+  width: 50%;
+}
+
+.graphic .container h3 {
+  font-family: var(--title-font);
+  color: var(--gd-text);
+  margin-bottom: 2rem;
+  font-size: 28px;
+}
+
+.graphic .container p {
+  color: var(--photo-text);
+  line-height: 27px;
+  font-weight: 500;
+}
+
+.photography .container h3 {
+  font-family: var(--title-font);
+  color: var(--gd-text);
+  margin-bottom: 2rem;
+  font-size: 28px;
+}
+
+.photography .container p {
+  color: var(--gd-text);
+  line-height: 27px;
+  font-weight: 500;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 160px 0;
+}
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 0 200px;
+}
+
+.testimonials h2 {
+  color: var(--grey400);
+  font-family: var(--title-font);
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 80px;
+}
+
+.testimonial-grid img {
+  border-radius: 50%;
+  max-width: 72px;
+  margin-bottom: 58px;
+}
+
+.testimonial-grid p {
+  color: var(--grey-text);
+  font-size: 18px;
+  line-height: 32px;
+  margin-bottom: 70px;
+  letter-spacing: -0.13px;
+}
+
+.testimonial-grid .name h3 {
+  font-family: var(--title-font);
+  color: var(--grey950);
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+
+.testimonial-grid .name span {
+  color: var(--grey400);
+  line-height: 25px;
+  font-size: 14px;
+}
+
+/* GALLERY */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.gallery-grid img {
+  width: 100%;
+  display: block;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--footer);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 72px 0 20px 0;
+}
+
+.footer-logo img {
+  color: var(--footer-text);
+  margin-bottom: 40px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  gap: 57px;
+  list-style: none;
+  margin-bottom: 90px;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  color: var(--footer-text);
+  font-weight: 500;
+}
+
+.social-media {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.attribution {
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  nav {
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    width: 90%;
+    color: var(--grey-text);
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: var(--white);
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    gap: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+
+  .nav-links li a {
+    color: var(--grey-text);
+  }
+
+  .nav-links button {
+    background-color: var(--primary-yellow);
+  }
+
+  .nav-links button:hover {
+    background-color: var(--primary-red);
+    color: var(--primary-yellow);
+  }
+
+  .hamburger img {
+    display: flex;
+  }
+
+  ul.nav-links.active {
+    display: flex;
+    background-color: var(--white);
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid .image {
+    height: auto;
+  }
+
+  .services-grid .image img {
+    height: auto;
+    object-fit: cover;
+  }
+
+  .services-grid .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+    padding: 64px 24px;
+  }
+
+  .design-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .design-grid .container {
+    width: 80%;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+    padding: 0 24px 86px 24px;
+    gap: 4rem;
+  }
+
+  .testimonials {
+    margin: 0;
+    padding: 0;
+  }
+
+  .testimonial-grid img {
+    margin-bottom: 32px;
+  }
+
+  .testimonial-grid p {
+    margin-bottom: 32px;
+  }
+
+  .testimonials h2 {
+    margin: 64px 24px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
